@@ -1,5 +1,5 @@
 import { Component, OnInit } from '@angular/core';
-import { NgForm } from '@angular/forms';
+import { FormGroup, NgForm } from '@angular/forms';
 import { Router } from '@angular/router';
 
 @Component({
@@ -8,6 +8,8 @@ import { Router } from '@angular/router';
   styleUrls: ['./user-signup.component.css']
 })
 export class UserSignupComponent implements OnInit{
+  userForm!:FormGroup;
+  emailMessage!:string;
 
   constructor(private router:Router){}
   
@@ -19,7 +21,7 @@ export class UserSignupComponent implements OnInit{
     this.router.navigate([''])
   }
 
-  Register(){
+  save(){
     this.router.navigate(['./home']);
   }
 
