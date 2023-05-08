@@ -16,11 +16,11 @@ export class UserSignupComponent implements OnInit{
   }
 
   cancelProcess(){
-
+    this.router.navigate([''])
   }
 
   Register(){
-
+    this.router.navigate(['./home']);
   }
 
 }
