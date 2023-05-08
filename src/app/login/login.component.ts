@@ -14,4 +14,11 @@ export class LoginComponent implements OnInit {
   ngOnInit(): void {
     throw new Error('Method not implemented.');
   }
+
+  loginProcess(){
+    this.router.navigate(['./home']);
+  }
+  registerClick(){
+    this.router.navigate(['./user-signup']);
+  }
 }
