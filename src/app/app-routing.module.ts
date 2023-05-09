@@ -4,14 +4,12 @@ import { LoginComponent } from './login/login.component';
 import { UserSignupComponent } from './user-signup/user-signup.component';
 import { HomeComponent } from './home/home.component';
 
-const routes: Routes = [];
+const routes: Routes = [{ path: '', component: LoginComponent },
+                        { path: 'user-signup', component: UserSignupComponent },
+                        { path: 'home', component: HomeComponent }];
 
 @NgModule({
-  imports: [RouterModule.forRoot([
-    {path:'',component:LoginComponent},
-    {path:'user-signup',component:UserSignupComponent},
-    {path:'home',component:HomeComponent}
-  ])],
+  imports: [RouterModule.forRoot(routes)],
   exports: [RouterModule]
 })
 export class AppRoutingModule { }
