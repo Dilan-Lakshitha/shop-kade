@@ -38,7 +38,7 @@ export class UserSignupComponent implements OnInit{
   }
 
   userRegister(formData:any){
-  this.http.post('http://127.0.0.1:9002/user/create',this.formData).subscribe(
+  this.http.post('http://127.0.0.1:9002/user/create',formData).subscribe(
     (resultData:any)=>{console.log(resultData);
     alert("user registerted successfully")}
   )

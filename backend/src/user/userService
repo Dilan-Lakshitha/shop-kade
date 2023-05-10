@@ -1,42 +1,38 @@
-var userModel = require('./userModel.js');
-var key = '123456789trytryrtyr';
-var encryptor = require('simple-encryptor')(key);
- 
+var userModel = require('./userModel');
+var bcrypt =require('bcrypt');
+
 module.exports.createUserDBService = (userDetails) => {
- 
- 
+
+
    return new Promise(function myFn(resolve, reject) {
- 
+
        var userModelData = new userModel();
- 
+
+       userModelData.email = userDetails.email;
        userModelData.firstName = userDetails.firstName;
        userModelData.lastName = userDetails.lastName;
-       userModelData.email = userDetails.email;
-       userModelData.city=userDetails.city;
-       userModelData.region=userDetails.region;
-       userModelData.postalcode=userDetails.postalcode;
-       userModelData.streetaddress = userDetails.streetaddress;
        userModelData.password = userDetails.password;
-       var encrypted = encryptor.encrypt(userDetails.password);
-       userModelData.password = encrypted;
-
- 
-       userModelData.save(function resultHandle(error, result) {
- 
-           if (error) {
-               reject(false);
-           } else {
-               resolve(true);
-           }
+       userModelData.streetaddress = userDetails.streetaddress;
+       userModelData.city = userDetails.city;
+       userModelData.region = userDetails.region;
+       userModelData.postalcode = userDetails.postalcode;
+       bcrypt.hash(userDetails.password, 10, function(err, hash){
+         userModelData.password = hash;
+         userModelData.save(function resultHandle(error, result) {
+            if (error) {
+                reject(false);
+            } else {
+                resolve(true);
+            }
+        });
        });
- 
    });
- 
+
 }
 
-module.exports.loginuserDBService = (userDetails)=>
+module.exports.loginuserDBService = (userDetails)=> 
 {
-   return new Promise(function myFn(resolve, reject)
+   return new Promise(function myFn(resolve, reject) 
    {
       userModel.findOne({ email: userDetails.email},function getresult(errorvalue, result)
       {
@@ -46,24 +42,16 @@ module.exports.loginuserDBService = (userDetails)=>
          }
          else
          {
-            if(result !=undefined &&  result !=null)
-            {
-               var decrypted = encryptor.decrypt(result.password);
- 
-               if(decrypted== userDetails.password)
-               {
-                  resolve({status: true,msg: "User Validated Successfully"});
+            console.log(result)
+            bcrypt.compare(userDetails.password, result.password, function(err, rst){
+
+               if(rst){
+                  resolve({status: true, msg: "user Validated Successfully"});
+
+               }else{
+                  reject({status: false, msg: "user Validated failed"});
                }
-               else
-               {
-                  reject({status: false,msg: "User Validated failed"});
-               }
-            }
-            else
-            {
-               reject({status: false,msg: "User Error Detailssss"});
-            }
- 
+         });
          }
       
       });
