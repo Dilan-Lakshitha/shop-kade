@@ -9,12 +9,17 @@ module.exports.createUserDBService = (userDetails) => {
  
        var userModelData = new userModel();
  
-       userModelData.firstname = userDetails.firstname;
-       userModelData.lastname = userDetails.lastname;
+       userModelData.firstName = userDetails.firstName;
+       userModelData.lastName = userDetails.lastName;
        userModelData.email = userDetails.email;
+       userModelData.city=userDetails.city;
+       userModelData.region=userDetails.region;
+       userModelData.postalcode=userDetails.postalcode;
+       userModelData.streetaddress = userDetails.streetaddress;
        userModelData.password = userDetails.password;
        var encrypted = encryptor.encrypt(userDetails.password);
        userModelData.password = encrypted;
+
  
        userModelData.save(function resultHandle(error, result) {
  

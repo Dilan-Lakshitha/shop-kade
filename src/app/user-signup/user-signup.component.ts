@@ -1,23 +1,8 @@
 import { Component, OnInit } from '@angular/core';
 import { FormGroup, FormBuilder,FormControl,Validators, AbstractControl } from '@angular/forms';
 import { Router } from '@angular/router';
+import { HttpClient } from '@angular/common/http';
 
-import { User } from './user-signup';
-
-
-function passwordMatcher(c:AbstractControl):{[key:string]:boolean} | null{
-  const passwordControl=c.get('password');
-  const confirmControl=c.get('confirmPassword');
-
-  if(passwordControl?.pristine||confirmControl?.pristine){
-    return null;
-  }
-
-  if(passwordControl?.value===confirmControl?.value){
-    return null;
-  }
-  return {'match':true};
-}
 
 @Component({
   selector: 'app-user-signup',
@@ -26,24 +11,25 @@ function passwordMatcher(c:AbstractControl):{[key:string]:boolean} | null{
 })
 export class UserSignupComponent implements OnInit{
   userForm!:FormGroup;
-  // user=new User();
   passwordMessage!:string;
+  formData:any={};
 
   constructor(private router:Router,
-              private fb:FormBuilder){}
+              private fb:FormBuilder,
+              private http:HttpClient){}
   
   ngOnInit(): void {
     this.userForm=this.fb.group({
-      firstName:['',[Validators.minLength(3)]],
-      lastName:['',[Validators.minLength(3)]],
-      email:['',[Validators.required,Validators.email]],
-      passwordGroup:this.fb.group({
-      password:['',[Validators.required,Validators.minLength(8)]],
-      confirmPassword:['',Validators.required],},{Validators:passwordMatcher}),
-      streetaddress:['',[Validators.minLength(5)]],
-      city:['',[Validators.required,Validators.compose]],
+      firstName:[''],
+      lastName:[''],
+      email:[''],
+      // passwordGroup:this.fb.group({
+      password:[''],
+      // confirmPassword:['',Validators.required],},{Validators:passwordMatcher}),
+      streetaddress:[''],
+      city:[''],
       region:[''],
-      postalcode:['',[Validators.required,Validators.length]]
+      postalcode:['']
     })
   }
 
@@ -51,8 +37,16 @@ export class UserSignupComponent implements OnInit{
     this.router.navigate([''])
   }
 
-  save(){
-    this.router.navigate(['./home']);
-  }
+  userRegister(formData:any){
+  this.http.post('http://127.0.0.1:9002/user/create',this.formData).subscribe(
+    (resultData:any)=>{console.log(resultData);
+    alert("user registerted successfully")}
+  )
+}
 
+save(){
+  const formData = this.userForm.value;
+  this.userRegister(formData);
+  this.router.navigate(['']);
+}
 }

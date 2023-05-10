@@ -20,7 +20,7 @@ app.listen(9002,function check(error)
     console.log("Started....!!!!");
 });
 
-mongoose.connect("mongodb://localhost:27017/Shop-kade",{useNewUrlParser: true,  useUnifiedTopology: true },
+mongoose.connect("mongodb://127.0.0.1:27017/Shop-kade",{useNewUrlParser: true,  useUnifiedTopology: true },
 function checkDb(error)
 {
     if(error)

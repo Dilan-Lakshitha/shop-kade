@@ -2,11 +2,11 @@ var mongoose = require('mongoose');
 var Schema = mongoose.Schema;
 
 var userSchema= new Schema({
-    firstname:{
+    firstName:{
         type:String,
         required:true
     },
-    lastname:{
+    lastName:{
         type:String,
         required:true
     },
@@ -17,7 +17,23 @@ var userSchema= new Schema({
     password:{
         type:String,
         required:true
+    },
+    streetaddress:{
+        type:String,
+        required:true
+    },
+    city:{
+        type: String,
+        required: true
+    },
+    region:{
+        type: String,
+        required: true
+    },
+    postalcode:{
+        type: String,
+        required: true
     }
 });
 
-module.exports = mongoose.model('employee',userSchema);
+module.exports = mongoose.model('user',userSchema);
