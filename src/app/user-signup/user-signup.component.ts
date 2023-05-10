@@ -29,7 +29,8 @@ export class UserSignupComponent implements OnInit{
       streetaddress:[''],
       city:[''],
       region:[''],
-      postalcode:['']
+      postalcode:[''],
+      role:"vendor"
     })
   }
 
