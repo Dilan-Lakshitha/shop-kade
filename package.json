@@ -19,6 +19,7 @@
     "@angular/platform-browser-dynamic": "^15.2.0",
     "@angular/router": "^15.2.0",
     "express": "^4.18.2",
+    "json-server": "^0.17.3",
     "mongoose": "^5.11.15",
     "rxjs": "~7.8.0",
     "simple-encryptor": "^4.0.0",

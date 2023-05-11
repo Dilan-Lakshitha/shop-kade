@@ -9,9 +9,6 @@ import { UserSignupComponent } from './user-signup/user-signup.component';
 import { FormsModule, ReactiveFormsModule } from '@angular/forms';
 import { HomeComponent } from './home/home.component';
 import { HttpClientModule} from "@angular/common/http";
-import { ProductListComponent } from './home/product-list/product-list.component';
-import { AddProductComponent } from './home/add-product/add-product.component';
-import { UserManageComponent } from './home/user-manage/user-manage.component';
 import { HomeModule } from './home/home.module';
 
 
