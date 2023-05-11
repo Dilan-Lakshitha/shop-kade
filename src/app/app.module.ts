@@ -12,6 +12,7 @@ import { HttpClientModule} from "@angular/common/http";
 import { ProductListComponent } from './home/product-list/product-list.component';
 import { AddProductComponent } from './home/add-product/add-product.component';
 import { UserManageComponent } from './home/user-manage/user-manage.component';
+import { HomeModule } from './home/home.module';
 
 
 @NgModule({
@@ -27,7 +28,8 @@ import { UserManageComponent } from './home/user-manage/user-manage.component';
     RouterModule,
     ReactiveFormsModule,
     HttpClientModule,
-    FormsModule
+    FormsModule,
+    HomeModule
   ],
   providers: [],
   bootstrap: [AppComponent]
