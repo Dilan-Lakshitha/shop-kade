@@ -8,6 +8,7 @@ import { CommonModule } from '@angular/common';
 import { UpdateEmployeeComponent } from './user-manage/update-employee/update-employee.component';
 import { EmployeeListComponent } from './user-manage/employee-list/employee-list.component';
 import { ProductEditComponent } from './product-Manage/product-edit/product-edit.component';
+import { AuthGuard } from '../Guard/auth.guard';
 
 
 
@@ -22,11 +23,11 @@ import { ProductEditComponent } from './product-Manage/product-edit/product-edit
     ],
     imports: [
       RouterModule.forChild([
-        {path:'productList',component:ProductListComponent},
-        {path:'AddProduct',component:AddProductComponent},
-        {path:'userManage',component:UserManageComponent},
+        {path:'productList',component:ProductListComponent,canActivate:[AuthGuard]},
+        {path:'AddProduct',component:AddProductComponent,canActivate:[AuthGuard]},
+        {path:'userManage',component:UserManageComponent,canActivate:[AuthGuard]},
         {path:'updateEmployee/:id',component:UpdateEmployeeComponent},
-        {path:'employeeList',component:EmployeeListComponent},
+        {path:'employeeList',component:EmployeeListComponent,canActivate:[AuthGuard]},
         {path:'productEdit/:id',component:ProductEditComponent}
       ]),
       FormsModule,
