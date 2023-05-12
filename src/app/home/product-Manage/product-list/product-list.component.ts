@@ -1,5 +1,5 @@
 import { Component, OnInit } from '@angular/core';
-import { ApiService } from 'src/app/api.service';
+import { ApiService } from 'src/app/home/product-Manage/api.service';
 import { product } from '../productmodel';
 
 @Component({
@@ -22,4 +22,10 @@ export class ProductListComponent implements OnInit{
       console.log("product")
     });
   }
+  delete(id: number) {
+    this.api.deleteProduct(id).subscribe((res => {
+      alert("employee deleted succssfully")
+      this.retriveProduct();
+    }))
+  } 
 }

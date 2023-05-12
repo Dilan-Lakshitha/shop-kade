@@ -1,7 +1,65 @@
 {
-  "posts": [
+  "product": [
+    {
+      "productname": "duka",
+      "description": "this is bad",
+      "productbrand": "duka",
+      "email": "jothi@gmail.com",
+      "country": "US",
+      "phonenumber": "0714293585",
+      "id": 3
+    },
+    {
+      "productname": "duka",
+      "description": "angappulige",
+      "productbrand": "duka",
+      "email": "jothi@gmail.com",
+      "country": "CA",
+      "phonenumber": "0714293585",
+      "id": 4
+    },
+    {
+      "productname": "bill",
+      "description": "this is good",
+      "productbrand": "ceb",
+      "email": "dilanwaskaduwa@gmail.com",
+      "country": "",
+      "phonenumber": "0714293585",
+      "id": 5
+    }
   ],
-  "profile": {
-    "name": "typicode"
-  }
+  "employee": [
+    {
+      "employeefirstname": "DIlan",
+      "employeelastname": "lakshitha",
+      "Position": "good boy",
+      "nic": "1283939",
+      "email": "dilanwaskaduwa@gmail.com",
+      "country": "EU",
+      "phonenumber": "0714293585",
+      "dob": "2023-05-08",
+      "id": 4
+    },
+    {
+      "employeefirstname": "DIlan",
+      "employeelastname": "lakshitha",
+      "Position": "pissek",
+      "nic": "1283939",
+      "email": "jothi@gmail.com",
+      "country": "US",
+      "phonenumber": "0714293585",
+      "id": 5
+    },
+    {
+      "employeefirstname": "DIlan",
+      "employeelastname": "lakshitha",
+      "Position": "good boy",
+      "nic": "1283939",
+      "email": "jothi@gmail.com",
+      "country": "CA",
+      "phonenumber": "0714293585",
+      "dob": "2023-05-01",
+      "id": 7
+    }
+  ]
 }

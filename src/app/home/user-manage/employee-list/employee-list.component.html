@@ -1,0 +1,61 @@
+<nav class="bg-gray-800 p-4">
+    <div class="flex justify-between items-center">
+        <a href="#" class="text-white font-bold text-xl" routerLink="/home">BUY & SALE</a>
+        <div>
+            <a href="#" class="bg-gray-500 hover:bg-blue-600 text-white font-semibold py-2 px-4 rounded mr-2"
+                routerLink="/userManage">Add a Another Employee</a>
+            <a href="#" class="bg-gray-500 hover:bg-red-600 text-white font-semibold py-2 px-4 rounded"
+                routerLink="/home">Back to Home</a>
+        </div>
+    </div>
+</nav>
+
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link href="https://cdn.jsdelivr.net/npm/tailwindcss@2.2.7/dist/tailwind.min.css" rel="stylesheet">
+    <title>Table Example</title>
+</head>
+
+<body>
+    <div class="container mx-auto p-4">
+        <table class="min-w-full bg-white border border-gray-300">
+            <thead>
+                <tr>
+                    <th class="py-3 px-4 bg-gray-100 border-b">Employee First Name</th>
+                    <th class="py-3 px-4 bg-gray-100 border-b">Empolyee last Name</th>
+                    <th class="py-3 px-4 bg-gray-100 border-b">Position</th>
+                    <th class="py-3 px-4 bg-gray-100 border-b">NIC</th>
+                    <th class="py-3 px-4 bg-gray-100 border-b">Email</th>
+                    <th class="py-3 px-4 bg-gray-100 border-b">COUNTRY</th>
+                    <th class="py-3 px-4 bg-gray-100 border-b">Phone Number</th>
+                    <th class="py-3 px-4 bg-gray-100 border-b">D.O.B</th>
+                    <th class="py-3 px-4 bg-gray-100 border-b">Option</th>
+                </tr>
+            </thead>
+            <tbody>
+                <tr *ngFor="let item of data">
+                    <td class="py-3 px-4 border-b">{{item.employeefirstname}}</td>
+                    <td class="py-3 px-4 border-b">{{item.employeelastname}}</td>
+                    <td class="py-3 px-4 border-b">{{item.Position}}</td>
+                    <td class="py-3 px-4 border-b">{{item.nic}}</td>
+                    <td class="py-3 px-4 border-b">{{item.email}}</td>
+                    <td class="py-3 px-4 border-b">{{item.country}}</td>
+                    <td class="py-3 px-4 border-b">{{item.phonenumber}}</td>
+                    <td class="py-3 px-4 border-b">{{item.dob}}</td>
+                    <div class="mt-2.5 grid grid-cols-2 gap-x-10 gap-y-6 sm:grid-col-2 ">
+                        <button type="submit"
+                            class="flex w-full justify-center rounded-md bg-indigo-600 px-3 py-1.5 text-sm font-semibold leading-6 text-white shadow-sm hover:bg-red-500 focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-indigo-600"
+                            (click)="delete(item.id)">Delete
+                        </button>
+                        <button type="submit"
+                            class="flex w-full justify-center rounded-md bg-indigo-600 px-3 py-1.5 text-sm font-semibold leading-6 text-white shadow-sm hover:bg-indigo-500 focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-indigo-600"
+                            routerLink="/updateEmployee/{{item.id}}">Edit
+                        </button>
+                    </div>
+                </tr>
+            </tbody>
+        </table>
+    </div>
+</body>

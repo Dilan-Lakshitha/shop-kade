@@ -1,10 +1,13 @@
 import { NgModule } from '@angular/core';
 import { RouterModule } from '@angular/router';
-import { AddProductComponent } from './add-product/add-product.component';
-import { ProductListComponent } from './product-list/product-list.component';
+import { AddProductComponent } from './product-Manage/add-product/add-product.component';
+import { ProductListComponent } from './product-Manage/product-list/product-list.component';
 import { UserManageComponent } from './user-manage/user-manage.component';
 import { FormsModule, ReactiveFormsModule } from '@angular/forms';
 import { CommonModule } from '@angular/common';
+import { UpdateEmployeeComponent } from './user-manage/update-employee/update-employee.component';
+import { EmployeeListComponent } from './user-manage/employee-list/employee-list.component';
+import { ProductEditComponent } from './product-Manage/product-edit/product-edit.component';
 
 
 
@@ -12,13 +15,19 @@ import { CommonModule } from '@angular/common';
     declarations: [
       AddProductComponent,
       ProductListComponent,
-      UserManageComponent
+      UserManageComponent,
+      UpdateEmployeeComponent,
+      EmployeeListComponent,
+      ProductEditComponent
     ],
     imports: [
       RouterModule.forChild([
         {path:'productList',component:ProductListComponent},
         {path:'AddProduct',component:AddProductComponent},
-        {path:'userManage',component:UserManageComponent}
+        {path:'userManage',component:UserManageComponent},
+        {path:'updateEmployee/:id',component:UpdateEmployeeComponent},
+        {path:'employeeList',component:EmployeeListComponent},
+        {path:'productEdit/:id',component:ProductEditComponent}
       ]),
       FormsModule,
       ReactiveFormsModule,
