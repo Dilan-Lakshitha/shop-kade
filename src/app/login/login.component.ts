@@ -41,6 +41,7 @@ export class LoginComponent implements OnInit {
           this.userSerive.setUserRole(UserRole.Vendor);
         }
         this.router.navigate(['./home']);
+        localStorage.setItem('logindata',JSON.stringify(formData))
       },
       (error)=>{
         console.log(error);
