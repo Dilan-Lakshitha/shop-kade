@@ -1,4 +1,6 @@
 import { Component } from '@angular/core';
+import { UserapiService } from './user-manage/userapi.service';
+import { loginService } from '../login/login.service';
 
 @Component({
   selector: 'app-home',
@@ -7,4 +9,8 @@ import { Component } from '@angular/core';
 })
 export class HomeComponent {
 
+
+  constructor(public userSerive:loginService){
+
+  }
 }

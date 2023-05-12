@@ -2,7 +2,7 @@
   "product": [
     {
       "productname": "duka",
-      "description": "this is bad",
+      "description": "this is very good",
       "productbrand": "duka",
       "email": "jothi@gmail.com",
       "country": "US",
@@ -19,13 +19,22 @@
       "id": 4
     },
     {
-      "productname": "bill",
-      "description": "this is good",
-      "productbrand": "ceb",
-      "email": "dilanwaskaduwa@gmail.com",
+      "productname": "phone",
+      "description": "wadak na bn",
+      "productbrand": "orange",
+      "email": "jothi@gmail.com",
       "country": "",
       "phonenumber": "0714293585",
-      "id": 5
+      "id": 6
+    },
+    {
+      "productname": "phone",
+      "description": "wadak na bn",
+      "productbrand": "orange",
+      "email": "jothi@gmail.com",
+      "country": "",
+      "phonenumber": "0714293585",
+      "id": 7
     }
   ],
   "employee": [
@@ -60,6 +69,17 @@
       "phonenumber": "0714293585",
       "dob": "2023-05-01",
       "id": 7
+    },
+    {
+      "employeefirstname": "DIlan",
+      "employeelastname": "lakshitha",
+      "Position": "pissek",
+      "nic": "1283939",
+      "email": "jothi@gmail.com",
+      "country": "EU",
+      "phonenumber": "0714293585",
+      "dob": "2023-05-16",
+      "id": 8
     }
   ]
 }
