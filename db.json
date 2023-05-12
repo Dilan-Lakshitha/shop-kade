@@ -81,5 +81,43 @@
       "dob": "2023-05-16",
       "id": 8
     }
+  ],
+  "signUP": [
+    {
+      "firstName": "",
+      "lastName": "",
+      "email": "dilanwaskaduwa@gmail.com",
+      "password": "1234",
+      "streetaddress": "no 111/3 dediywala road,maha waskaduwa",
+      "city": "kalutra",
+      "region": "kalutara",
+      "postalcode": "1234",
+      "role": "vendor",
+      "id": 1
+    },
+    {
+      "firstName": "",
+      "lastName": "",
+      "email": "jothipala@gmail.com",
+      "password": "12345",
+      "streetaddress": "no 111/3 dediywala road,maha waskaduwa",
+      "city": "kalutra",
+      "region": "kalutara",
+      "postalcode": "12345",
+      "role": "vendor",
+      "id": 2
+    },
+    {
+      "firstName": "",
+      "lastName": "",
+      "email": "jothi@gmail.com",
+      "password": "12345",
+      "streetaddress": "no 111/3 dediywala road,maha waskaduwa",
+      "city": "kalutra",
+      "region": "kalutara",
+      "postalcode": "12",
+      "role": "vendor",
+      "id": 3
+    }
   ]
 }
