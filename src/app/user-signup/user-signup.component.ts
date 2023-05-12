@@ -20,11 +20,11 @@ export class UserSignupComponent implements OnInit{
   
   ngOnInit(): void {
     this.userForm=this.fb.group({
-      firstName:[''],
+      firstName:['',Validators.required],
       lastName:[''],
-      email:[''],
+      email:['',[Validators.required,Validators.email]],
       // passwordGroup:this.fb.group({
-      password:[''],
+      password:['',[Validators.required,Validators.minLength(8)]],
       // confirmPassword:['',Validators.required],},{Validators:passwordMatcher}),
       streetaddress:[''],
       city:[''],
