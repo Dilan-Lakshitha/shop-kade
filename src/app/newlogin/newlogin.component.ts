@@ -1,10 +1,12 @@
-import { HttpClient } from '@angular/common/http';
 import { Component, OnInit } from '@angular/core';
 import { FormBuilder, FormControl, FormGroup } from '@angular/forms';
 import { Router } from '@angular/router';
-import { loginService } from '../login/login.service';
-import { UserRole } from '../UserRole';
-import { login } from './loginmodel';
+
+
+import { HttpClient } from '@angular/common/http';
+import { vendor } from './loginmodel';
+
+
 
 @Component({
   selector: 'app-newlogin',
@@ -12,53 +14,41 @@ import { login } from './loginmodel';
   styleUrls: ['./newlogin.component.css']
 })
 export class NewloginComponent implements OnInit {
-  loginForm!:FormGroup;
-  email:string='';
-  password:string='';
+  loginForm: FormGroup | any;
+  userForm: FormGroup | any;
+  email: string = '';
+  password: string = '';
+  newuser: any;
 
-  constructor(private router:Router,
-              private fb:FormBuilder,
-              private http:HttpClient,
-              private userSerive:loginService){
-
+  constructor(private router: Router,
+    private fb: FormBuilder,
+    private http: HttpClient) {
+    sessionStorage.clear();
   }
   ngOnInit(): void {
-    this.loginForm=this.fb.group({
-      email:new FormControl(this.email),
-      password:new FormControl(this.password)
+    this.loginForm = this.fb.group({
+      email: new FormControl(this.email),
+      password: new FormControl(this.password)
     });
   }
 
-  loginProcess():void{
-    const formData=this.loginForm.value;
-    this.http.get<login[]>('http://localhost:3000/signUP',formData).subscribe(
-      (response:any)=>{
-        console.log(response);
-        const newuser=response.find((user:any)=>{
-          console.log(user)
-          return user.email===formData.email && user.password===formData.password;
-        });
-        if(newuser){
-
-        if(response.role==='employee'){
-          this.userSerive.setUserRole(UserRole.Employee);
-        }else if(response.role==='vendor'){
-          this.userSerive.setUserRole(UserRole.Vendor);
-        }
-        // this.router.navigate(['./home']);
-        localStorage.setItem('logindata',JSON.stringify(formData))
-      }else{
-        alert("Invalid Email or Password")
-        this.loginForm.reset();
+  loginProcess() {
+    this.http.get<vendor[]>('http://localhost:3000/usersAll').subscribe((response) => {
+      //password and email checking 
+      const vendor = response.find((any: any) => {
+        return any.email === this.loginForm.value.email && any.password === this.loginForm.value.password;
+      });
+      if (vendor) {
+        console.log(vendor.firstName)
+        alert("user logging to the dashboard as  " + vendor.role)
+        localStorage.setItem('logindata', JSON.stringify(vendor))
+        this.router.navigate(['./home'])
+      } else {
+        alert("Invalid Deatile")
       }
-      },
-      (error)=>{
-        console.log(error);
-      }
-    );
-
+    })
   }
-  registerClick():void{
+  registerClick(): void {
     this.router.navigate(['./newsignup']);
   }
 }

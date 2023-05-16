@@ -1,8 +1,9 @@
 import { Component, OnInit } from '@angular/core';
-import { FormGroup } from '@angular/forms';
 import { UserapiService } from '../userapi.service';
 import { ActivatedRoute, Params, Router } from '@angular/router';
-import { User } from '../usermodel';
+import { User } from 'src/app/newlogin/loginmodel';
+import { FormGroup } from '@angular/forms';
+
 
 @Component({
   selector: 'app-update-employee',

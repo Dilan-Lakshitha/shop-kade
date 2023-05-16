@@ -1,6 +1,6 @@
 import { Component, OnInit } from '@angular/core';
 import { UserapiService } from '../userapi.service';
-import { User } from '../usermodel';
+import { User } from 'src/app/newlogin/loginmodel';
 
 @Component({
   selector: 'app-employee-list',

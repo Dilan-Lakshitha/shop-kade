@@ -23,11 +23,11 @@ import { AuthGuard } from '../Guard/auth.guard';
     ],
     imports: [
       RouterModule.forChild([
-        {path:'productList',component:ProductListComponent,canActivate:[AuthGuard]},
-        {path:'AddProduct',component:AddProductComponent,canActivate:[AuthGuard]},
-        {path:'userManage',component:UserManageComponent,canActivate:[AuthGuard]},
+        {path:'productList',component:ProductListComponent},
+        {path:'AddProduct',component:AddProductComponent},
+        {path:'userManage',component:UserManageComponent},
         {path:'updateEmployee/:id',component:UpdateEmployeeComponent},
-        {path:'employeeList',component:EmployeeListComponent,canActivate:[AuthGuard]},
+        {path:'employeeList',component:EmployeeListComponent},
         {path:'productEdit/:id',component:ProductEditComponent}
       ]),
       FormsModule,

@@ -23,26 +23,28 @@
         <table class="min-w-full bg-white border border-gray-300">
             <thead>
                 <tr>
-                    <th class="py-3 px-4 bg-gray-100 border-b">Employee First Name</th>
-                    <th class="py-3 px-4 bg-gray-100 border-b">Empolyee last Name</th>
+                    <th class="py-3 px-4 bg-gray-100 border-b">First Name</th>
+                    <th class="py-3 px-4 bg-gray-100 border-b">Last Name</th>
                     <th class="py-3 px-4 bg-gray-100 border-b">Position</th>
                     <th class="py-3 px-4 bg-gray-100 border-b">NIC</th>
                     <th class="py-3 px-4 bg-gray-100 border-b">Email</th>
                     <th class="py-3 px-4 bg-gray-100 border-b">COUNTRY</th>
                     <th class="py-3 px-4 bg-gray-100 border-b">Phone Number</th>
+                    <th class="py-3 px-4 bg-gray-100 border-b">Select Role</th>
                     <th class="py-3 px-4 bg-gray-100 border-b">D.O.B</th>
                     <th class="py-3 px-4 bg-gray-100 border-b">Option</th>
                 </tr>
             </thead>
             <tbody>
                 <tr *ngFor="let item of data">
-                    <td class="py-3 px-4 border-b">{{item.employeefirstname}}</td>
-                    <td class="py-3 px-4 border-b">{{item.employeelastname}}</td>
+                    <td class="py-3 px-4 border-b">{{item.firstName}}</td>
+                    <td class="py-3 px-4 border-b">{{item.lastName}}</td>
                     <td class="py-3 px-4 border-b">{{item.Position}}</td>
                     <td class="py-3 px-4 border-b">{{item.nic}}</td>
                     <td class="py-3 px-4 border-b">{{item.email}}</td>
                     <td class="py-3 px-4 border-b">{{item.country}}</td>
                     <td class="py-3 px-4 border-b">{{item.phonenumber}}</td>
+                    <td class="py-3 px-4 border-b">{{item.role}}</td>
                     <td class="py-3 px-4 border-b">{{item.dob}}</td>
                     <div class="mt-2.5 grid grid-cols-2 gap-x-10 gap-y-6 sm:grid-col-2 ">
                         <button type="submit"

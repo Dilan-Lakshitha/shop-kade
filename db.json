@@ -35,89 +35,74 @@
       "country": "",
       "phonenumber": "0714293585",
       "id": 7
-    }
-  ],
-  "employee": [
-    {
-      "employeefirstname": "DIlan",
-      "employeelastname": "lakshitha",
-      "Position": "good boy",
-      "nic": "1283939",
-      "email": "dilanwaskaduwa@gmail.com",
-      "country": "EU",
-      "phonenumber": "0714293585",
-      "dob": "2023-05-08",
-      "id": 4
     },
     {
-      "employeefirstname": "DIlan",
-      "employeelastname": "lakshitha",
-      "Position": "pissek",
-      "nic": "1283939",
-      "email": "jothi@gmail.com",
-      "country": "US",
-      "phonenumber": "0714293585",
-      "id": 5
-    },
-    {
-      "employeefirstname": "DIlan",
-      "employeelastname": "lakshitha",
-      "Position": "good boy",
-      "nic": "1283939",
-      "email": "jothi@gmail.com",
+      "productname": "shoes",
+      "description": "loang",
+      "productbrand": "nike",
+      "email": "Dilanlakshitha194@gmail.com",
       "country": "CA",
       "phonenumber": "0714293585",
-      "dob": "2023-05-01",
-      "id": 7
-    },
-    {
-      "employeefirstname": "DIlan",
-      "employeelastname": "lakshitha",
-      "Position": "pissek",
-      "nic": "1283939",
-      "email": "jothi@gmail.com",
-      "country": "EU",
-      "phonenumber": "0714293585",
-      "dob": "2023-05-16",
       "id": 8
     }
   ],
-  "signUP": [
+  "usersAll": [
     {
-      "firstName": "",
-      "lastName": "",
-      "email": "dilanwaskaduwa@gmail.com",
-      "password": "1234",
-      "streetaddress": "no 111/3 dediywala road,maha waskaduwa",
-      "city": "kalutra",
-      "region": "kalutara",
-      "postalcode": "1234",
-      "role": "vendor",
-      "id": 1
-    },
-    {
-      "firstName": "",
-      "lastName": "",
-      "email": "jothipala@gmail.com",
-      "password": "12345",
-      "streetaddress": "no 111/3 dediywala road,maha waskaduwa",
-      "city": "kalutra",
-      "region": "kalutara",
-      "postalcode": "12345",
-      "role": "vendor",
+      "employeefirstname": "kamal",
+      "employeelastname": "nimal",
+      "Position": "officer",
+      "nic": "1283939",
+      "email": "kamal@gmail.com",
+      "password": "1234567",
+      "country": "US",
+      "phonenumber": "0714293585",
+      "dob": "2023-04-19",
+      "role": "admin",
       "id": 2
     },
     {
-      "firstName": "",
-      "lastName": "",
-      "email": "jothi@gmail.com",
+      "firstName": "Dilan",
+      "lastName": "lakshitha",
+      "email": "Dilanlakshitha194@gmail.com",
       "password": "12345",
-      "streetaddress": "no 111/3 dediywala road,maha waskaduwa",
-      "city": "kalutra",
-      "region": "kalutara",
-      "postalcode": "12",
+      "country": "CA",
+      "phonenumber": "0714293585",
+      "dob": "2023-05-02",
       "role": "vendor",
       "id": 3
+    },
+    {
+      "firstName": "Dilan",
+      "lastName": "lakshitha",
+      "email": "Dilanlakshitha194@gmail.com",
+      "password": "12345",
+      "country": "CA",
+      "phonenumber": "0714293585",
+      "dob": "2023-05-02",
+      "role": "vendor",
+      "id": 4
+    },
+    {
+      "firstName": "Dilan",
+      "lastName": "lakshitha",
+      "email": "Dilanlakshitha194@gmail.com",
+      "password": "12345",
+      "country": "SL",
+      "phonenumber": "0714293585",
+      "dob": "2023-05-02",
+      "role": "vendor",
+      "id": 5
+    },
+    {
+      "firstName": "Dilan",
+      "lastName": "lakshitha",
+      "email": "Dilanlakshitha194@gmail.com",
+      "password": "12345",
+      "country": "SL",
+      "phonenumber": "0714293585",
+      "dob": "2023-05-02",
+      "role": "vendor",
+      "id": 6
     }
   ]
 }

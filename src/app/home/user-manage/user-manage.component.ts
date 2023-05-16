@@ -1,8 +1,8 @@
 import { Component, OnInit } from '@angular/core';
 import { FormBuilder, FormGroup } from '@angular/forms';
-import { User } from './usermodel';
 import { UserapiService } from './userapi.service';
 import { Router } from '@angular/router';
+import { User } from 'src/app/newlogin/loginmodel';
 
 @Component({
   selector: 'app-user-manage',
@@ -21,15 +21,17 @@ export class UserManageComponent implements OnInit {
               ) { }
   ngOnInit(): void {
     this.employeeForm = this.fb.group({
-      employeefirstname: [''],
-      employeelastname: [''],
+      firstname: [''],
+      lastname: [''],
       Position: [''],
       nic: [''],
       email: [''],
+      password:[''],
       country: [''],
       phonenumber: [''],
       dob: [Number],
-      id: [Number]
+      id: [Number],
+      role:['']
     })
     
   }
