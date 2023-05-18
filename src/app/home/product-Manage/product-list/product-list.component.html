@@ -25,9 +25,11 @@
                     <th class="py-3 px-4 bg-gray-100 border-b">Product Name</th>
                     <th class="py-3 px-4 bg-gray-100 border-b">Description</th>
                     <th class="py-3 px-4 bg-gray-100 border-b">Product Brand</th>
+                    <th class="py-3 px-4 bg-gray-100 border-b">Product Price</th>
                     <th class="py-3 px-4 bg-gray-100 border-b">Made In</th>
                     <th class="py-3 px-4 bg-gray-100 border-b">Vendor Email</th>
                     <th class="py-3 px-4 bg-gray-100 border-b">Vendor Phone</th>
+                    <th class="py-3 px-4 bg-gray-100 border-b">Photo</th>
                     <th class="py-3 px-4 bg-gray-100 border-b">Option</th>
                 </tr>
             </thead>
@@ -36,9 +38,11 @@
                     <td class="py-3 px-4 border-b">{{item.productname}}</td>
                     <td class="py-3 px-4 border-b">{{item.description}}</td>
                     <td class="py-3 px-4 border-b">{{item.productbrand}}</td>
+                    <td class="py-3 px-4 border-b">{{item.productprice}}</td>
                     <td class="py-3 px-4 border-b">{{item.country}}</td>
                     <td class="py-3 px-4 border-b">{{item.email}}</td>
                     <td class="py-3 px-4 border-b">{{item.phonenumber}}</td>
+                    <td class="py-3 px-4 border-b"><img style="width: 200px;height:200px;" [src]="item.photourl"></td>
                     <div class="mt-2.5 grid grid-cols-2 gap-x-10 gap-y-6 sm:grid-col-2 ">
                         <button type="submit"
                             class="flex w-full justify-center rounded-md bg-red-600 px-3 py-1.5 text-sm font-semibold leading-6 text-white shadow-sm hover:bg-red-500 focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-indigo-600"

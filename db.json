@@ -1,49 +1,52 @@
 {
   "product": [
     {
-      "productname": "duka",
-      "description": "this is very good",
-      "productbrand": "duka",
-      "email": "jothi@gmail.com",
-      "country": "US",
-      "phonenumber": "0714293585",
-      "id": 3
-    },
-    {
-      "productname": "duka",
-      "description": "angappulige",
-      "productbrand": "duka",
-      "email": "jothi@gmail.com",
-      "country": "CA",
-      "phonenumber": "0714293585",
-      "id": 4
-    },
-    {
-      "productname": "phone",
-      "description": "wadak na bn",
-      "productbrand": "orange",
-      "email": "jothi@gmail.com",
+      "productname": "Black Shirt ",
+      "description": "local t shirt",
+      "productbrand": "t shirt nika",
+      "email": "lakshitha6@gail.com",
       "country": "",
-      "phonenumber": "0714293585",
-      "id": 6
+      "phonenumber": "0714320303",
+      "photourl": "https://images.pexels.com/photos/1553783/pexels-photo-1553783.jpeg?cs=srgb&dl=pexels-myicahel-tamburini-1553783.jpg&fm=jpg",
+      "id": 13,
+      "currency": "$",
+      "productprice": "34"
     },
     {
-      "productname": "phone",
-      "description": "wadak na bn",
-      "productbrand": "orange",
-      "email": "jothi@gmail.com",
-      "country": "",
-      "phonenumber": "0714293585",
-      "id": 7
-    },
-    {
-      "productname": "shoes",
-      "description": "loang",
+      "productname": "Blue T ",
+      "description": "Shirt colar",
       "productbrand": "nike",
+      "productprice": "120",
+      "currency": "$",
+      "email": "Dilanlakshitha194@gmail.com",
+      "country": "SL",
+      "phonenumber": "070638302",
+      "photourl": "https://5.imimg.com/data5/SELLER/Default/2021/2/LG/QZ/AV/947710/royal-blue-500x500-1000x1000.jpeg",
+      "id": 14
+    },
+    {
+      "productname": "line T Shirt",
+      "description": "coton",
+      "productbrand": "pumma",
+      "productprice": "12",
+      "currency": "Lk",
+      "email": "Dilanlakshitha194@gmail.com",
+      "country": "SL",
+      "phonenumber": "0714293585",
+      "photourl": "https://assets.ajio.com/medias/sys_master/root/20230120/4mly/63caae35aeb269c651ef0d39/-288Wx360H-465634623-navy-MODEL.jpg",
+      "id": 15
+    },
+    {
+      "productname": "gray Line",
+      "description": "line T shirt",
+      "productbrand": "orange",
+      "productprice": "10",
+      "currency": "€",
       "email": "Dilanlakshitha194@gmail.com",
       "country": "CA",
       "phonenumber": "0714293585",
-      "id": 8
+      "photourl": "https://assets.ajio.com/medias/sys_master/root/20220901/ARH5/6310ee67f997dd1f8dd3e3fd/-473Wx593H-464918983-blue-MODEL.jpg",
+      "id": 16
     }
   ],
   "usersAll": [
@@ -58,7 +61,9 @@
       "phonenumber": "0714293585",
       "dob": "2023-04-19",
       "role": "admin",
-      "id": 2
+      "id": 2,
+      "firstName": "dilan",
+      "lastName": "dilan"
     },
     {
       "firstName": "Dilan",
@@ -68,41 +73,8 @@
       "country": "CA",
       "phonenumber": "0714293585",
       "dob": "2023-05-02",
-      "role": "vendor",
+      "role": "employee",
       "id": 3
-    },
-    {
-      "firstName": "Dilan",
-      "lastName": "lakshitha",
-      "email": "Dilanlakshitha194@gmail.com",
-      "password": "12345",
-      "country": "CA",
-      "phonenumber": "0714293585",
-      "dob": "2023-05-02",
-      "role": "vendor",
-      "id": 4
-    },
-    {
-      "firstName": "Dilan",
-      "lastName": "lakshitha",
-      "email": "Dilanlakshitha194@gmail.com",
-      "password": "12345",
-      "country": "SL",
-      "phonenumber": "0714293585",
-      "dob": "2023-05-02",
-      "role": "vendor",
-      "id": 5
-    },
-    {
-      "firstName": "Dilan",
-      "lastName": "lakshitha",
-      "email": "Dilanlakshitha194@gmail.com",
-      "password": "12345",
-      "country": "SL",
-      "phonenumber": "0714293585",
-      "dob": "2023-05-02",
-      "role": "vendor",
-      "id": 6
     }
   ]
 }

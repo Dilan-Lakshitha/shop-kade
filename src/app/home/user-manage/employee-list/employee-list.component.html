@@ -23,8 +23,8 @@
         <table class="min-w-full bg-white border border-gray-300">
             <thead>
                 <tr>
-                    <th class="py-3 px-4 bg-gray-100 border-b">First Name</th>
-                    <th class="py-3 px-4 bg-gray-100 border-b">Last Name</th>
+                    <!-- <th class="py-3 px-4 bg-gray-100 border-b">First Name</th> -->
+                    <th class="py-3 px-4 bg-gray-100 border-b">Full Name</th>
                     <th class="py-3 px-4 bg-gray-100 border-b">Position</th>
                     <th class="py-3 px-4 bg-gray-100 border-b">NIC</th>
                     <th class="py-3 px-4 bg-gray-100 border-b">Email</th>
@@ -37,8 +37,8 @@
             </thead>
             <tbody>
                 <tr *ngFor="let item of data">
-                    <td class="py-3 px-4 border-b">{{item.firstName}}</td>
-                    <td class="py-3 px-4 border-b">{{item.lastName}}</td>
+                    <!-- <td class="py-3 px-4 border-b">{{item.firstName}}</td> -->
+                    <td class="py-3 px-4 border-b">{{item.firstName}}   {{item.lastName}}</td>
                     <td class="py-3 px-4 border-b">{{item.Position}}</td>
                     <td class="py-3 px-4 border-b">{{item.nic}}</td>
                     <td class="py-3 px-4 border-b">{{item.email}}</td>
